@@ -1,5 +1,5 @@
 {% set name = "langchain-groq" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_groq-{{ version }}.tar.gz
-  sha256: af166fd30c60006dba4345bc9a59edfa2745edcb5b3e0bd957abd3d09416bbc5
+  sha256: ecd3aac54e5e454633f3920a11d093dcb425c18830f721cc86e69e5acfbe7c85
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8.1,<4.0
-    - langchain-core >=0.1.45,<0.3
+    - langchain-core >=0.2.2,<0.3
     - groq >=0.4.1,<1
 
 test:
