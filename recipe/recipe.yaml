@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: langchain-groq
-  version: 1.2.0
+  version: 1.2.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/langchain_groq-${{ version }}.tar.gz
-  sha256: b87117d16a16f68c9c2ca0f31820b46f7064c19563baca848893fcb0bcb41a97
+  sha256: 0ce10a14be647bf7d1c1c66348c8d7124a8ab6857cc6d65e4984fed7b2215752
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0
-    - langchain-core >=1.5.1,<2.0.0
+    - langchain-core >=1.8.2,<2.0.0
     - groq >=0.30.0
 tests:
   - python:
